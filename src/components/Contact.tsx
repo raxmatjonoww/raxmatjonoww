@@ -4,7 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Instagram, Mail, Phone, Send, GitHub } from 'lucide-react';  // GitHub import qilindi
+import { Instagram, Mail, Phone, Send } from 'lucide-react';  // GitHub import qilindi
 import { useToast } from '@/components/ui/use-toast';
 
 const Contact = () => {
@@ -115,23 +115,6 @@ const Contact = () => {
                     </div>
                   </div>
 
-                  {/* GitHub */}
-                  <div className="flex items-center gap-4">
-                    <div className="bg-primary/10 p-4 rounded-full">
-                      <GitHub className="h-6 w-6 text-primary" /> {/* GitHub ikonkasini qo‘shdik */}
-                    </div>
-                    <div>
-                      <p className="font-medium">GitHub</p>
-                      <a 
-                        href="https://github.com/raxmatjonoww" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="text-primary hover:underline"
-                      >
-                        @raxmatjonoww
-                      </a>
-                    </div>
-                  </div>
                 </div>
               </CardContent>
             </Card>
