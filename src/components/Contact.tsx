@@ -4,7 +4,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
-import { Instagram, Mail, Phone, Send } from 'lucide-react';  // GitHub import qilindi
+import { Instagram, Mail, Phone, Send, GitHub } from 'lucide-react';  // GitHub import qilindi
 import { useToast } from '@/components/ui/use-toast';
 
 const Contact = () => {
