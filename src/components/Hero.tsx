@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { Download, ChevronDown } from "lucide-react";
 
@@ -9,7 +8,7 @@ const Hero = () => {
       className="min-h-screen relative flex items-center justify-center skyline-bg"
     >
       <div className="absolute inset-0 hero-flag-overlay"></div>
-      
+
       {/* Animated Flag Elements */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
         <div className="flag-stars absolute top-10 right-10 z-10 animate-pulse">
@@ -21,8 +20,8 @@ const Hero = () => {
         <div className="flag-stripe absolute left-0 h-8 bg-white animate-fade-in" style={{ top: '20%', width: '100%', opacity: 0.3 }}></div>
         <div className="flag-stripe absolute left-0 h-8 bg-americano-red animate-fade-in" style={{ top: '30%', width: '100%', opacity: 0.3 }}></div>
       </div>
-      
-      <div className="container mx-auto px-4 relative z-10 flex flex-col items-center text-white text-center">
+
+      <div className="container mx-auto relative z-10 flex flex-col items-center text-white text-center">
         <div className="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-white shadow-lg mb-6">
           <img
             src="/lovable-uploads/310ba13f-a404-48c2-b467-cd92ae71ad1c.png"
@@ -48,16 +47,15 @@ const Hero = () => {
               <Download className="mr-2" /> Download CV
             </Button>
             <Button
-  variant="outline"
-  className="border-white text-white bg-transparent hover:bg-white/20"
-  size="lg"
-  asChild
->
-  <a href="#about">
-    Learn More <ChevronDown className="ml-2" />
-  </a>
-</Button>
-
+              variant="outline"
+              className="border-white text-white bg-transparent hover:bg-white/20"
+              size="lg"
+              asChild
+            >
+              <a href="#about">
+                Learn More <ChevronDown className="ml-2" />
+              </a>
+            </Button>
           </div>
         </div>
       </div>

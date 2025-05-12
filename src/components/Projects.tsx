@@ -1,6 +1,9 @@
 
 import { Button } from "@/components/ui/button";
 import { Github, ExternalLink } from "lucide-react";
+import one from "../../public/1.jpg"
+import two from "../../public/2.jpg"
+import three from "../../public/3.jpg"
 
 type Project = {
   id: number;
@@ -15,29 +18,31 @@ type Project = {
 const projects: Project[] = [
   {
     id: 1,
-    title: "E-commerce Platform",
-    description: "A full-featured e-commerce platform with payment processing and admin dashboard.",
+    title: "ChillPro Service",
+    description: "",
     technologies: ["React", "Node.js", "MongoDB", "Stripe"],
-    githubLink: "https://github.com/raxmatjonoww",
-    liveLink: "#",
-    image: "https://images.unsplash.com/photo-1492321936769-b49830bc1d1e",
+    githubLink: "https://github.com/raxmatjonoww/ChillPro-Service",
+    liveLink: "https://www.chillpro.uz/",
+    image: one,
   },
   {
     id: 2,
-    title: "Social Media Dashboard",
-    description: "Analytics dashboard for social media accounts with data visualization.",
+    title: "Tomato",
+    description: "",
     technologies: ["Next.js", "TypeScript", "Chart.js", "Firebase"],
-    githubLink: "https://github.com/raxmatjonoww",
-    liveLink: "#",
-    image: "https://images.unsplash.com/photo-1466442929976-97f336a657be",
+    githubLink: "https://github.com/raxmatjonoww/Tomato",
+    liveLink: "https://tomato-cafe.vercel.app/",
+    image: two,
   },
   {
     id: 3,
-    title: "Task Management App",
-    description: "Real-time task management application for teams with Kanban boards.",
+    title: "Surfing School",
+    description: "",
     technologies: ["React", "Redux", "Node.js", "Socket.io"],
-    githubLink: "https://github.com/raxmatjonoww",
-    image: "https://images.unsplash.com/photo-1493397212122-2b85dda8106b",
+      githubLink: "https://github.com/raxmatjonoww/Surfing",
+    liveLink: "https://surfing-school.vercel.app/",
+
+    image: three,
   },
 ];
 
