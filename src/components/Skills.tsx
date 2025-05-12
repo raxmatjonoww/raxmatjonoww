@@ -1,108 +1,94 @@
 
-import React from 'react';
-import { useLanguage } from '../contexts/LanguageContext';
-import { Card, CardContent } from '@/components/ui/card';
-import { Progress } from '@/components/ui/progress';
+import React from "react";
+import { Progress } from "@/components/ui/progress";
 
-const SkillCategory = ({ 
-  title, 
-  skills 
-}: { 
-  title: string; 
-  skills: { name: string; level: number }[] 
-}) => {
+const SkillItem = ({ name, percentage }: { name: string; percentage: number }) => {
   return (
-    <div>
-      <h3 className="text-xl font-semibold mb-6">{title}</h3>
-      <div className="space-y-6">
-        {skills.map((skill) => (
-          <div key={skill.name} className="space-y-2">
-            <div className="flex justify-between">
-              <span className="font-medium">{skill.name}</span>
-              <span>{skill.level}%</span>
-            </div>
-            <Progress value={skill.level} className="h-2" />
-          </div>
-        ))}
+    <div className="mb-6">
+      <div className="flex justify-between mb-1">
+        <span className="font-medium">{name}</span>
+        <span>{percentage}%</span>
       </div>
+      <Progress value={percentage} className="h-2" />
     </div>
   );
 };
 
 const Skills = () => {
-  const { t } = useLanguage();
-
   const frontendSkills = [
-    { name: 'HTML/CSS', level: 95 },
-    { name: 'JavaScript', level: 90 },
-    { name: 'React', level: 88 },
-    { name: 'TypeScript', level: 85 },
+    { name: "HTML/CSS", percentage: 95 },
+    { name: "JavaScript", percentage: 90 },
+    { name: "React.js", percentage: 88 },
+    { name: "TypeScript", percentage: 85 },
+    { name: "Next.js", percentage: 80 },
   ];
 
   const backendSkills = [
-    { name: 'Node.js', level: 85 },
-    { name: 'Express.js', level: 82 },
-    { name: 'Python', level: 75 },
-    { name: 'PHP', level: 70 },
-  ];
-
-  const databaseSkills = [
-    { name: 'MongoDB', level: 88 },
-    { name: 'MySQL', level: 85 },
-    { name: 'PostgreSQL', level: 80 },
-    { name: 'Redis', level: 75 },
-  ];
-
-  const toolsSkills = [
-    { name: 'Git', level: 92 },
-    { name: 'Docker', level: 80 },
-    { name: 'AWS', level: 75 },
-    { name: 'CI/CD', level: 78 },
+    { name: "Node.js", percentage: 85 },
+    { name: "Express", percentage: 82 },
+    { name: "MongoDB", percentage: 80 },
+    { name: "SQL", percentage: 78 },
+    { name: "GraphQL", percentage: 75 },
   ];
 
   return (
-    <section id="skills" className="py-20 bg-background">
-      <div className="container max-w-screen-xl mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
-          {t('skills.title')}
-        </h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <Card className="border shadow-sm">
-            <CardContent className="p-6">
-              <SkillCategory 
-                title={t('skills.frontend')} 
-                skills={frontendSkills} 
-              />
-            </CardContent>
-          </Card>
+    <section id="skills" className="py-20 bg-gray-50">
+      <div className="container mx-auto px-4">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="section-heading">My Skills</h2>
           
-          <Card className="border shadow-sm">
-            <CardContent className="p-6">
-              <SkillCategory 
-                title={t('skills.backend')} 
-                skills={backendSkills} 
-              />
-            </CardContent>
-          </Card>
+          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div>
+              <h3 className="text-2xl font-semibold mb-6 text-americano-navy">
+                Frontend Development
+              </h3>
+              {frontendSkills.map((skill) => (
+                <SkillItem
+                  key={skill.name}
+                  name={skill.name}
+                  percentage={skill.percentage}
+                />
+              ))}
+            </div>
+            
+            <div>
+              <h3 className="text-2xl font-semibold mb-6 text-americano-navy">
+                Backend Development
+              </h3>
+              {backendSkills.map((skill) => (
+                <SkillItem
+                  key={skill.name}
+                  name={skill.name}
+                  percentage={skill.percentage}
+                />
+              ))}
+            </div>
+          </div>
           
-          <Card className="border shadow-sm">
-            <CardContent className="p-6">
-              <SkillCategory 
-                title={t('skills.database')} 
-                skills={databaseSkills} 
-              />
-            </CardContent>
-          </Card>
-          
-          <Card className="border shadow-sm">
-            <CardContent className="p-6">
-              <SkillCategory 
-                title={t('skills.tools')} 
-                skills={toolsSkills} 
-              />
-            </CardContent>
-          </Card>
+          <div className="mt-12">
+            <h3 className="text-2xl font-semibold mb-6 text-americano-navy">
+              Additional Skills
+            </h3>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+              {[
+                "Git",
+                "Docker",
+                "AWS",
+                "REST API",
+                "Redux",
+                "Firebase",
+                "UI/UX Design",
+                "Responsive Design",
+              ].map((skill) => (
+                <div
+                  key={skill}
+                  className="bg-white py-3 px-4 rounded-md shadow-sm border border-gray-100 text-center"
+                >
+                  {skill}
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

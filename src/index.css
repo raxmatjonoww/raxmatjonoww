@@ -1,4 +1,6 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -14,7 +16,7 @@
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 221.2 83.2% 53.3%;
+    --primary: 213 71% 22%;
     --primary-foreground: 210 40% 98%;
 
     --secondary: 210 40% 96.1%;
@@ -23,15 +25,15 @@
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 0 67% 50%;
+    --accent-foreground: 210 40% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 221.2 83.2% 53.3%;
+    --ring: 222.2 84% 4.9%;
 
     --radius: 0.5rem;
   }
@@ -46,7 +48,7 @@
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 217.2 91.2% 59.8%;
+    --primary: 210 40% 98%;
     --primary-foreground: 222.2 47.4% 11.2%;
 
     --secondary: 217.2 32.6% 17.5%;
@@ -63,7 +65,7 @@
 
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
-    --ring: 224.3 76.3% 48%;
+    --ring: 212.7 26.8% 83.9%;
   }
 }
 
@@ -71,21 +73,101 @@
   * {
     @apply border-border;
   }
+
   body {
-    @apply bg-background text-foreground;
-    font-feature-settings: "rlig" 1, "calt" 1;
+    @apply bg-background text-foreground font-rubik;
+  }
+
+  .section-heading {
+    @apply text-4xl md:text-5xl font-bold mb-8 relative;
+    &::after {
+      content: '';
+      @apply absolute left-0 -bottom-3 w-24 h-1 bg-americano-red;
+    }
+  }
+
+  .star {
+    @apply w-4 h-4 bg-white inline-block rounded-full;
   }
 }
 
-html {
-  scroll-behavior: smooth;
+.flag-border {
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 8px;
+    background: linear-gradient(to right, 
+      #CF2E2E 0%, #CF2E2E 33%, 
+      #FFFFFF 33%, #FFFFFF 66%, 
+      #0A3161 66%, #0A3161 100%);
+  }
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
+.project-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
   }
-  to {
-    opacity: 1;
+}
+
+.hero-flag-overlay {
+  background: linear-gradient(to bottom, rgba(10, 49, 97, 0.8), rgba(207, 46, 46, 0.3));
+}
+
+.skyline-bg {
+  background-image: url('https://images.unsplash.com/photo-1496307653780-42ee777d4833');
+  background-size: cover;
+  background-position: center;
+}
+
+/* American Flag Enhancements */
+.stripe {
+  position: absolute;
+  left: 0;
+}
+
+.flag-container {
+  transform-origin: left center;
+  animation: wave 10s infinite ease-in-out;
+}
+
+.flag-wrapper {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+@keyframes wave {
+  0%, 100% {
+    transform: rotate(0deg);
   }
+  20% {
+    transform: rotate(5deg);
+  }
+  40% {
+    transform: rotate(-5deg);
+  }
+  60% {
+    transform: rotate(3deg);
+  }
+  80% {
+    transform: rotate(-3deg);
+  }
+}
+
+.american-flag-banner {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+h1::after, h2::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  margin: 8px auto 0;
+  background: linear-gradient(to right, #CF2E2E 0%, #CF2E2E 33%, #FFFFFF 33%, #FFFFFF 66%, #0A3161 66%, #0A3161 100%);
 }

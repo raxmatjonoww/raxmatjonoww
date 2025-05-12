@@ -1,41 +1,73 @@
-# Jahongir Raxmatjonov - Full-Stack Developer
+# Welcome to your Lovable project
 
-Welcome to my portfolio! I am a passionate full-stack developer with experience in building dynamic, responsive, and user-friendly websites and applications. Below you'll find more about my skills, projects, and contact information.
+## Project info
 
-## About Me
+**URL**: https://lovable.dev/projects/7c9f7fb6-b092-41a4-aaff-275ecf69e236
 
-I am Jahongir Raxmatjonov, a full-stack developer from [Your Location]. I specialize in both frontend and backend development, with a deep understanding of the full web development stack. My goal is to build applications that are both efficient and scalable while providing users with seamless experiences.
+## How can I edit this code?
 
-- **Frontend:** React, JavaScript, HTML5, CSS3, TypeScript, Vue.js
-- **Backend:** Node.js, Express.js, Python (Flask/Django)
-- **Databases:** MongoDB, PostgreSQL, MySQL
-- **Version Control:** Git, GitHub
-- **Deployment:** Vercel, Heroku, AWS, DigitalOcean
+There are several ways of editing your application.
 
-## Skills
+**Use Lovable**
 
-- **Frontend:** Expertise in building beautiful and interactive user interfaces with modern frameworks such as React and Vue.js.
-- **Backend:** Strong experience with Node.js and Express, designing RESTful APIs and server-side logic.
-- **Databases:** Skilled in working with both SQL (PostgreSQL, MySQL) and NoSQL (MongoDB) databases.
-- **Version Control:** Proficient in Git and GitHub for version control and collaboration.
+Simply visit the [Lovable Project](https://lovable.dev/projects/7c9f7fb6-b092-41a4-aaff-275ecf69e236) and start prompting.
 
-## Projects
+Changes made via Lovable will be committed automatically to this repo.
 
-### 1. **DevSphere IT Company**
-   A project showcasing a professional website for a web development agency. The website includes sections like services, portfolio, and contact details. Built with React and styled with CSS.
+**Use your preferred IDE**
 
-### 2. **ChillPro Service**
-   A service website built for a fictional company that offers tech support and service packages. The project includes dynamic forms and a responsive design.
+If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
 
-### 3. **Fasten**
-   A delivery application developed using Node.js and React. The app includes real-time updates and user authentication features.
+The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
 
-## How to Reach Me
+Follow these steps:
 
-- **Email:** [raxmatjonovjahongir5@gmail.com]
-- **LinkedIn:** [https://www.linkedin.com/in/jahongir-raxmatjonov-5a5743342/]
-- **GitHub:** [https://github.com/raxmatjonoww]
+```sh
+# Step 1: Clone the repository using the project's Git URL.
+git clone <YOUR_GIT_URL>
 
-## Contributions
+# Step 2: Navigate to the project directory.
+cd <YOUR_PROJECT_NAME>
 
-If you'd like to contribute to any of my open-source projects or collaborate on a new one, feel free to reach out through GitHub or email. I'm always open to new ideas and collaborations!
+# Step 3: Install the necessary dependencies.
+npm i
+
+# Step 4: Start the development server with auto-reloading and an instant preview.
+npm run dev
+```
+
+**Edit a file directly in GitHub**
+
+- Navigate to the desired file(s).
+- Click the "Edit" button (pencil icon) at the top right of the file view.
+- Make your changes and commit the changes.
+
+**Use GitHub Codespaces**
+
+- Navigate to the main page of your repository.
+- Click on the "Code" button (green button) near the top right.
+- Select the "Codespaces" tab.
+- Click on "New codespace" to launch a new Codespace environment.
+- Edit files directly within the Codespace and commit and push your changes once you're done.
+
+## What technologies are used for this project?
+
+This project is built with:
+
+- Vite
+- TypeScript
+- React
+- shadcn-ui
+- Tailwind CSS
+
+## How can I deploy this project?
+
+Simply open [Lovable](https://lovable.dev/projects/7c9f7fb6-b092-41a4-aaff-275ecf69e236) and click on Share -> Publish.
+
+## Can I connect a custom domain to my Lovable project?
+
+Yes, you can!
+
+To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+
+Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
